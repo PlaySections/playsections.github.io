@@ -1,0 +1,481 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="PlaySections - Audio Player for iOS">
+    <meta name="keywords" content="PlaySections, audio, player, iOS, iPhone, iPad">
+    <meta name="author" content="Hiroshi Kajihata">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- SITE TITLE -->
+    <title>PlaySections - Audio Player for iOS</title>
+
+    <!-- =========================
+      FAV AND TOUCH ICONS  
+============================== -->
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+
+    <!-- =========================
+     STYLESHEETS   
+============================== -->
+    <!-- BOOTSTRAP -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- FONT ICONS -->
+    <link rel="stylesheet" href="assets/elegant-icons/style.css">
+    <link rel="stylesheet" href="assets/app-icons/styles.css">
+    <!--[if lte IE 7]><script src="lte-ie7.js"></script><![endif]-->
+
+    <!-- CAROUSEL AND LIGHTBOX -->
+    <link rel="stylesheet" href="css/owl.theme.css">
+    <link rel="stylesheet" href="css/owl.carousel.css">
+    <link rel="stylesheet" href="css/nivo-lightbox.css">
+    <link rel="stylesheet" href="css/nivo_themes/default/default.css">
+
+    <!-- ANIMATIONS -->
+    <link rel="stylesheet" href="css/animate.min.css">
+
+    <!-- CUSTOM STYLESHEETS -->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- COLORS -->
+    <link rel="stylesheet" href="css/colors/playsections.css">
+
+    <!-- RESPONSIVE FIXES -->
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <!--[if lt IE 9]>
+			<script src="js/html5shiv.js"></script>
+			<script src="js/respond.min.js"></script>
+<![endif]-->
+
+    <!-- JQUERY -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <!-- =========================
+     PRE LOADER       
+============================== -->
+    <div class="preloader">
+        <div class="status">&nbsp;</div>
+    </div>
+
+    <!-- =========================
+     HEADER   
+============================== -->
+    <header class="header" id="home">
+        <!-- SOLID COLOR BG -->
+        <div class="solid-color">
+            <!-- To make header full screen. Use .full-screen class with solid color. Example: <div class="solid-color full-screen">  -->
+            <!-- STICKY NAVIGATION -->
+            <div class="navbar navbar-inverse bs-docs-nav navbar-fixed-top sticky-navigation">
+                <div class="container">
+                    <div class="navbar-header">
+                        <!-- LOGO ON STICKY NAV BAR -->
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#kane-navigation">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="#"><img src="images/PlaySectionsLogo243x54.png" alt=""></a>
+                    </div>
+
+                    <!-- NAVIGATION LINKS -->
+                    <div class="navbar-collapse collapse" id="kane-navigation">
+                        <ul class="nav navbar-nav navbar-right main-navigation">
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#features">Features</a></li>
+                            <li><a href="#screenshot-section">Screenshots</a></li>
+                            <li><a href="#download">Download</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CONTAINER -->
+            <div class="container">
+                <!-- ONLY LOGO ON HEADER -->
+                <div class="only-logo">
+                    <div class="navbar">
+                        <div class="navbar-header">
+                            <img src="images/PlaySectionsLogo360x80.png" alt="">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row home-contents">
+                    <div class="col-md-6 col-sm-6">
+                        <!-- HEADING AND BUTTONS -->
+                        <div class="intro-section">
+                            <!-- WELCOM MESSAGE -->
+                            <h1 class="intro">Set Marks and<br>Play Sections</h1>
+                            <h5>Available on the App Store</h5>
+
+                            <!-- BUTTON -->
+                            <div class="buttons" id="download-button">
+                                <a href="#download" class="btn btn-default btn-lg standard-button"><i class="icon-app-download"></i>Download App</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-sm-6 hidden-xs">
+                        <!-- PHONE IMAGE WILL BE HIDDEN IN TABLET PORTRAIT AND MOBILE-->
+                        <div class="phone-image">
+                            <img src="images/CoverArt.png" class="img-responsive" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- =========================
+     FEATURES 
+============================== -->
+    <section class="features" id="features">
+        <div class="container">
+            <!-- SECTION HEADER -->
+            <div class="section-header wow fadeIn animated" data-wow-offset="120" data-wow-duration="1.5s">
+                <!-- SECTION TITLE -->
+                <h2 class="white-text">PlaySections Features</h2>
+                <div class="colored-line">
+                </div>
+                <div class="section-description">
+                    Simple but powerful tools
+                </div>
+                <div class="colored-line">
+                </div>
+            </div>
+
+            <div class="row">
+                <!-- FEATURES LEFT -->
+                <div class="col-md-4 col-sm-4 features-left wow fadeInLeft animated" data-wow-offset="10" data-wow-duration="1.5s">
+                    <!-- FEATURE -->
+                    <div class="feature">
+                        <!-- ICON -->
+                        <div class="icon-container">
+                            <div class="icon">
+                                <i class="icon_download"></i>
+                            </div>
+                        </div>
+                        <!-- FEATURE HEADING AND DESCRIPTION -->
+                        <div class="fetaure-details">
+                            <h4 class="main-color">Import Audio Files</h4>
+                            <p>
+                                Import from your Music Library, or from the other applications.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- FEATURE -->
+                    <div class="feature">
+                        <!-- ICON -->
+                        <div class="icon-container">
+                            <div class="icon">
+                                <i class=" arrow_triangle-down"></i>
+                            </div>
+                        </div>
+                        <!-- FEATURE HEADING AND DESCRIPTION -->
+                        <div class="fetaure-details">
+                            <h4 class="main-color">Set Marks</h4>
+                            <p>
+                                Set marks on an waveforms to divide an audio file into multiple sections.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- FEATURE -->
+                    <div class="feature">
+                        <!-- ICON -->
+                        <div class="icon-container">
+                            <div class="icon">
+                                <i class=" icon_document"></i>
+                            </div>
+                        </div>
+                        <!-- FEATURE HEADING AND DESCRIPTION -->
+                        <div class="fetaure-details">
+                            <h4 class="main-color">Set Title</h4>
+                            <p>
+                                Set a title for each section, section names, lyrics, chord progressions.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PHONE IMAGE -->
+                <div class="col-md-4 col-sm-4">
+                    <div class="phone-image wow bounceIn animated" data-wow-offset="120" data-wow-duration="1.5s">
+                        <img src="images/iPhone_SectionList.png" alt="">
+                    </div>
+                </div>
+                <!-- FEATURES RIGHT -->
+                <div class="col-md-4 col-sm-4 features-right wow fadeInRight animated" data-wow-offset="10" data-wow-duration="1.5s">
+                    <!-- FEATURE -->
+                    <div class="feature">
+                        <!-- ICON -->
+                        <div class="icon-container">
+                            <div class="icon">
+                                <i class="arrow_triangle-right"></i>
+                            </div>
+                        </div>
+                        <!-- FEATURE HEADING AND DESCRIPTION -->
+                        <div class="fetaure-details">
+                            <h4 class="main-color">Play Sections</h4>
+                            <p>
+                                Tap and jump to sections from a section list. No more A-B loop!
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- FEATURE -->
+                    <div class="feature">
+                        <!-- ICON -->
+                        <div class="icon-container">
+                            <div class="icon">
+                                <i class="icon_music"></i>
+                            </div>
+                        </div>
+                        <!-- FEATURE HEADING AND DESCRIPTION -->
+                        <div class="fetaure-details">
+                            <h4 class="main-color">Set Loop</h4>
+                            <p>
+                                Set a section loop or song loop. You can play a specific section over again.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- FEATURE -->
+                    <div class="feature">
+                        <!-- ICON -->
+                        <div class="icon-container">
+                            <div class="icon">
+                                <i class="icon_adjust-vert"></i>
+                            </div>
+                        </div>
+                        <!-- FEATURE HEADING AND DESCRIPTION -->
+                        <div class="fetaure-details">
+                            <h4 class="main-color">More Playback Options</h4>
+                            <p>
+                                Playback speed change, pitch shift, vocal cancel, and 7 bands EQ support.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================
+     BRIEF LEFT SECTION 
+============================== -->
+    <section class="app-brief deep-dark-bg" id="brief1">
+        <div class="container">
+            <div class="row">
+                <!-- PHONES IMAGE -->
+                <div class="col-md-6 wow fadeInRight animated" data-wow-offset="10" data-wow-duration="1.5s">
+                    <div class="phone-image">
+                        <img src="images/iPhone_SectionList.png" alt="">
+                    </div>
+                </div>
+
+                <!-- RIGHT SIDE WITH BRIEF -->
+                <div class="col-md-6 left-align wow fadeInLeft animated" data-wow-offset="10" data-wow-duration="1.5s">
+                    <!-- SECTION TITLE -->
+                    <h2 class="white-text">For Musicians, Singers, Dancers, and More</h2>
+                    <div class="colored-line-left">
+                    </div>
+
+                    <!-- FEATURE LIST -->
+                    <p>
+                        PlaySections allows you to play your audio files, with a section list for each song. Set marks to divide an audio file into multiple sections. Set a title for each section and seek to any section from the section list. Set a loop, change playback speed, pitch, and use vocal cancel effects as you want. No need to use fast backward button frequently!
+                    </p>
+
+                    <h4>Many Uses</h4>
+                    <ul class="feature-list">
+                        <li><i class='arrow_triangle-right'></i>Set marks for intro, verses, chorus, instrumental solo</li>
+                        <li><i class='arrow_triangle-right'></i>Set chord progressions and lyrics for each section</li>
+                        <li><i class='arrow_triangle-right'></i>Practice of playing musical instruments, singing, and dancing</li>
+                        <li><i class='arrow_triangle-right'></i>Analyze music structure, chords for music dictation</li>
+                        <li><i class='arrow_triangle-right'></i>Great for language learners, transcription from audio files of meeting/conference</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================
+     BRIEF RIGHT SECTION 
+============================== -->
+    <section class="app-brief" id="brief2">
+        <div class="container">
+            <div class="row">
+                <!-- BRIEF -->
+                <div class="col-md-6 left-align wow fadeInLeft animated" data-wow-offset="10" data-wow-duration="1.5s">
+                    <!-- SECTION TITLE -->
+                    <h2 class="white-text">Tech Specs</h2>
+                    <div class="colored-line-left">
+                    </div>
+                    <p>
+                        <ul class="feature-list">
+                            <li><i class='arrow_triangle-right'></i>Music Library Integration</li>
+                            <li><i class='arrow_triangle-right'></i>Waveforms scroll</li>
+                            <li><i class='arrow_triangle-right'></i>Section title edit</li>
+                            <li><i class='arrow_triangle-right'></i>Song, Album, Artist name edit</li>
+                            <li><i class='arrow_triangle-right'></i>Loop playback (section, song)</li>
+                            <li><i class='arrow_triangle-right'></i>Speed control (-50% to +200%)</li>
+                            <li><i class='arrow_triangle-right'></i>Pitch control (-12 to +12)</li>
+                            <li><i class='arrow_triangle-right'></i>7 bands EQ control (-24dB to +12dB)</li>
+                            <li><i class='arrow_triangle-right'></i>FX (Vocal Cancel)</li>
+                            <li><i class='arrow_triangle-right'></i>Share Extension, Open-in support</li>
+                            <li><i class='arrow_triangle-right'></i>Remote control access</li>
+                            <li><i class='arrow_triangle-right'></i>Low latency playback (Audio Unit support)</li>
+                            <li><i class='arrow_triangle-right'></i>Background playback</li>
+                            <li><i class='arrow_triangle-right'></i>Supports all major audio formats (AAC, MP3, WAV, AIFF...)</li>
+                        </ul>
+                        Notice: DRM protected content is not supported, because Apple does not allow 3rd party apps to access the files.
+                    </p>
+                </div>
+                <!-- PHONES IMAGE -->
+                <div class="col-md-6 wow fadeInRight animated" data-wow-offset="10" data-wow-duration="1.5s">
+                    <div class="phone-image">
+                        <img src="images/iPhone_EQ.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================
+     SCREENSHOTS
+============================== -->
+    <section class="screenshots deep-dark-bg" id="screenshot-section">
+        <div class="container">
+            <!-- SECTION HEADER -->
+            <div class="section-header wow fadeIn animated" data-wow-offset="10" data-wow-duration="1.5s">
+                <!-- SECTION TITLE -->
+                <h2 class="white-text">Screenshots</h2>
+            </div>
+
+            <div class="row wow bounceIn animated" data-wow-offset="10" data-wow-duration="1.5s">
+                <div id="screenshots" class="owl-carousel owl-theme">
+                   
+                    <div class="shot">
+                        <a href="images/screenshots/iPhone_SectionList.png" data-lightbox-gallery="screenshots-gallery"><img src="images/screenshots/iPhone_SectionList.png" alt="Screenshot"></a>
+                    </div>
+
+                    <div class="shot">
+                        <a href="images/screenshots/iPhone_TitleEdit.png" data-lightbox-gallery="screenshots-gallery"><img src="images/screenshots/iPhone_TitleEdit.png" alt="Screenshot"></a>
+                    </div>
+
+                    <div class="shot">
+                        <a href="images/screenshots/iPhone_MoveMark.png" data-lightbox-gallery="screenshots-gallery"><img src="images/screenshots/iPhone_MoveMark.png" alt="Screenshot"></a>
+                    </div>
+
+                    <div class="shot">
+                        <a href="images/screenshots/iPhone_SpeedControl.png" data-lightbox-gallery="screenshots-gallery"><img src="images/screenshots/iPhone_SpeedControl.png" alt="Screenshot"></a>
+                    </div>
+
+                    <div class="shot">
+                        <a href="images/screenshots/iPhone_FX.png" data-lightbox-gallery="screenshots-gallery"><img src="images/screenshots/iPhone_FX.png" alt="Screenshot"></a>
+                    </div>
+
+                    <div class="shot">
+                        <a href="images/screenshots/iPhone_EQ.png" data-lightbox-gallery="screenshots-gallery"><img src="images/screenshots/iPhone_EQ.png" alt="Screenshot"></a>
+                    </div>
+                    
+                    <div class="shot">
+                        <a href="images/screenshots/iPhone_MediaList.png" data-lightbox-gallery="screenshots-gallery"><img src="images/screenshots/iPhone_MediaList.png" alt="Screenshot"></a>
+                    </div>
+                    
+                    <div class="shot">
+                        <a href="images/screenshots/iPhone_ShareExtension.png" data-lightbox-gallery="screenshots-gallery"><img src="images/screenshots/iPhone_ShareExtension.png" alt="Screenshot"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================
+     DOWNLOAD NOW 
+============================== -->
+    <section class="download" id="download">
+        <div class="solid-color">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <!-- DOWNLOAD BUTTONS AREA -->
+                        <div class="download-container">
+                            <h2 class=" wow fadeInLeft animated" data-wow-offset="10" data-wow-duration="1.5s">Download PlaySections</h2>
+
+                            <!-- BUTTONS -->
+                            <div class="buttons wow fadeInRight animated" data-wow-offset="10" data-wow-duration="1.5s">
+                                <a href="https://itunes.apple.com/us/app/playsections/id1032204861">
+                                    <img src="images/Download_on_the_App_Store_Badge_US-UK_135x40.svg" alt="Download on the App Store">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================
+     FOOTER 
+============================== -->
+    <footer>
+        <div class="container">
+            <!-- SOCIAL ICONS -->
+            <ul class="social-icons">
+                <li><a href="https://www.facebook.com/PlaySections-497795103707883/"><i class="social_facebook_square"></i></a></li>
+                <li><a href="https://twitter.com/PlaySections/"><i class="social_twitter_square"></i></a></li>
+            </ul>
+            <!-- COPYRIGHT TEXT -->
+            <p class="copyright">
+                ©2015 Hiroshi Kajihata, All Rights Reserved
+            </p>
+        </div>
+    </footer>
+
+    <!-- =========================
+     SCRIPTS 
+============================== -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/smoothscroll.js"></script>
+    <script src="js/jquery.scrollTo.min.js"></script>
+    <script src="js/jquery.localScroll.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/nivo-lightbox.min.js"></script>
+    <script src="js/simple-expand.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/retina.min.js"></script>
+    <script src="js/jquery.nav.js"></script>
+    <script src="js/matchMedia.js"></script>
+    <script src="js/jquery.ajaxchimp.min.js"></script>
+    <script src="js/jquery.fitvids.js"></script>
+    <script src="js/custom.js"></script>
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-69462261-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+</body>
+
+</html>

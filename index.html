@@ -55,6 +55,51 @@
 
     <!-- JQUERY -->
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="js/i18next-1.11.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            function setupText() {
+                $(".main-navigation").i18n();
+                $(".intro-section").i18n();
+                $(".features").i18n();
+                $("#brief1").i18n();
+                $("#tech_specs").i18n();
+                $(".screenshots").i18n();
+                $(".download").i18n();
+            }
+            $("#language-selector").click(function () {
+                var newLang;
+                if ($("#language-selector").text() != "English") {
+                    // from English to Japanese
+                    newLang = "ja";
+                    $("#language-selector").text("English");
+                } else {
+                    // from Japanese to English
+                    $("#language-selector").text("日本語");
+                    newLang = "en";
+                }
+                $.i18n.setLng(newLang, function () {
+                    setupText();
+                });
+            });
+
+            var lang = navigator.languages ? navigator.languages[0] : (navigator.language || navigator.userLanguage);
+            lang = lang.split("-")[0].toLowerCase(); // "JA-JP" => "ja"
+
+            if (lang == "ja") {
+                $("#language-selector").text("English")
+            } else {
+                $("#language-selector").text("日本語")
+                lang = "en"
+            }
+
+            $.i18n.init({
+                lng: lang
+            }, function () {
+                setupText();
+            });
+        });
+    </script>
 </head>
 
 <body>
@@ -89,10 +134,21 @@
                     <!-- NAVIGATION LINKS -->
                     <div class="navbar-collapse collapse" id="kane-navigation">
                         <ul class="nav navbar-nav navbar-right main-navigation">
-                            <li><a href="#home">Home</a></li>
-                            <li><a href="#features">Features</a></li>
-                            <li><a href="#screenshot-section">Screenshots</a></li>
-                            <li><a href="#download">Download</a></li>
+                            <li>
+                                <a href="#home" data-i18n="main-navigation.home"></a>
+                            </li>
+                            <li>
+                                <a href="#features" data-i18n="main-navigation.features"></a>
+                            </li>
+                            <li>
+                                <a href="#screenshot-section" data-i18n="main-navigation.screenshot"></a>
+                            </li>
+                            <li>
+                                <a href="#download" data-i18n="main-navigation.download"></a>
+                            </li>
+                            <li>
+                                <a href="#home" id="language-selector">日本語</a>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -115,11 +171,11 @@
                         <div class="intro-section">
                             <!-- WELCOM MESSAGE -->
                             <h1 class="intro">Set Marks and<br>Play Sections</h1>
-                            <h5>Available on the App Store</h5>
+                            <h5 data-i18n="intro-section.available"></h5>
 
                             <!-- BUTTON -->
                             <div class="buttons" id="download-button">
-                                <a href="#download" class="btn btn-default btn-lg standard-button"><i class="icon-app-download"></i>Download App</a>
+                                <a href="#download" class="btn btn-default btn-lg standard-button"><i class="icon-app-download"></i><span data-i18n="intro-section.download"></span></a>
                             </div>
                         </div>
                     </div>
@@ -138,19 +194,15 @@
     <!-- =========================
      FEATURES 
 ============================== -->
-    <section class="features" id="features">
+    <section class="features">
         <div class="container">
             <!-- SECTION HEADER -->
             <div class="section-header wow fadeIn animated" data-wow-offset="120" data-wow-duration="1.5s">
                 <!-- SECTION TITLE -->
-                <h2 class="white-text">PlaySections Features</h2>
-                <div class="colored-line">
-                </div>
-                <div class="section-description">
-                    Simple but powerful tools
-                </div>
-                <div class="colored-line">
-                </div>
+                <h2 class="white-text" data-i18n="features.title"></h2>
+                <div class="colored-line"></div>
+                <div class="section-description" data-i18n="features.subtitle"></div>
+                <div class="colored-line"></div>
             </div>
 
             <div class="row">
@@ -166,10 +218,8 @@
                         </div>
                         <!-- FEATURE HEADING AND DESCRIPTION -->
                         <div class="fetaure-details">
-                            <h4 class="main-color">Import Audio Files</h4>
-                            <p>
-                                Import from your Music Library, or from the other applications.
-                            </p>
+                            <h4 class="main-color" data-i18n="features.feature1_title"></h4>
+                            <p data-i18n="features.feature1_description"></p>
                         </div>
                     </div>
 
@@ -183,10 +233,8 @@
                         </div>
                         <!-- FEATURE HEADING AND DESCRIPTION -->
                         <div class="fetaure-details">
-                            <h4 class="main-color">Set Marks</h4>
-                            <p>
-                                Set marks on an waveforms to divide an audio file into multiple sections.
-                            </p>
+                            <h4 class="main-color" data-i18n="features.feature2_title"></h4>
+                            <p data-i18n="features.feature2_description"></p>
                         </div>
                     </div>
 
@@ -200,10 +248,8 @@
                         </div>
                         <!-- FEATURE HEADING AND DESCRIPTION -->
                         <div class="fetaure-details">
-                            <h4 class="main-color">Set Title</h4>
-                            <p>
-                                Set a title for each section, section names, lyrics, chord progressions.
-                            </p>
+                            <h4 class="main-color" data-i18n="features.feature3_title"></h4>
+                            <p data-i18n="features.feature3_description"></p>
                         </div>
                     </div>
                 </div>
@@ -226,10 +272,8 @@
                         </div>
                         <!-- FEATURE HEADING AND DESCRIPTION -->
                         <div class="fetaure-details">
-                            <h4 class="main-color">Play Sections</h4>
-                            <p>
-                                Tap and jump to sections from a section list. No more A-B loop!
-                            </p>
+                            <h4 class="main-color" data-i18n="features.feature4_title"></h4>
+                            <p data-i18n="features.feature4_description"></p>
                         </div>
                     </div>
 
@@ -243,10 +287,8 @@
                         </div>
                         <!-- FEATURE HEADING AND DESCRIPTION -->
                         <div class="fetaure-details">
-                            <h4 class="main-color">Set Loop</h4>
-                            <p>
-                                Set a section loop or song loop. You can play a specific section over again.
-                            </p>
+                            <h4 class="main-color" data-i18n="features.feature5_title"></h4>
+                            <p data-i18n="features.feature5_description"></p>
                         </div>
                     </div>
 
@@ -260,10 +302,8 @@
                         </div>
                         <!-- FEATURE HEADING AND DESCRIPTION -->
                         <div class="fetaure-details">
-                            <h4 class="main-color">More Playback Options</h4>
-                            <p>
-                                Playback speed change, pitch shift, vocal cancel, and 7 bands EQ support.
-                            </p>
+                            <h4 class="main-color" data-i18n="features.feature6_title"></h4>
+                            <p data-i18n="features.feature6_description"></p>
                         </div>
                     </div>
                 </div>
@@ -285,24 +325,22 @@
                 </div>
 
                 <!-- RIGHT SIDE WITH BRIEF -->
-                <div class="col-md-6 left-align wow fadeInLeft animated" data-wow-offset="10" data-wow-duration="1.5s">
+                <div class="col-md-6 left-align wow fadeInLeft animated" data-wow-offset="10" data-wow-duration="1.5s" id="brief1">
                     <!-- SECTION TITLE -->
-                    <h2 class="white-text">For Musicians, Singers, Dancers, and More</h2>
+                    <h2 class="white-text" data-i18n="brief1.title"></h2>
                     <div class="colored-line-left">
                     </div>
 
                     <!-- FEATURE LIST -->
-                    <p>
-                        PlaySections allows you to play your audio files, with a section list for each song. Set marks to divide an audio file into multiple sections. Set a title for each section and seek to any section from the section list. Set a loop, change playback speed, pitch, and use vocal cancel effects as you want. No need to use fast backward button frequently!
-                    </p>
+                    <p data-i18n="brief1.description"></p>
 
-                    <h4>Many Uses</h4>
+                    <h4 data-i18n="brief1.many_uses_title"></h4>
                     <ul class="feature-list">
-                        <li><i class='arrow_triangle-right'></i>Set marks for intro, verses, chorus, instrumental solo</li>
-                        <li><i class='arrow_triangle-right'></i>Set chord progressions and lyrics for each section</li>
-                        <li><i class='arrow_triangle-right'></i>Practice of playing musical instruments, singing, and dancing</li>
-                        <li><i class='arrow_triangle-right'></i>Analyze music structure, chords for music dictation</li>
-                        <li><i class='arrow_triangle-right'></i>Great for language learners, transcription from audio files of meeting/conference</li>
+                        <li><i class='arrow_triangle-right'></i><span data-i18n="brief1.use1"></span></li>
+                        <li><i class='arrow_triangle-right'></i><span data-i18n="brief1.use2"></span></li>
+                        <li><i class='arrow_triangle-right'></i><span data-i18n="brief1.use3"></span></li>
+                        <li><i class='arrow_triangle-right'></i><span data-i18n="brief1.use4"></span></li>
+                        <li><i class='arrow_triangle-right'></i><span data-i18n="brief1.use5"></span></li>
                     </ul>
                 </div>
             </div>
@@ -316,29 +354,29 @@
         <div class="container">
             <div class="row">
                 <!-- BRIEF -->
-                <div class="col-md-6 left-align wow fadeInLeft animated" data-wow-offset="10" data-wow-duration="1.5s">
+                <div class="col-md-6 left-align wow fadeInLeft animated" data-wow-offset="10" data-wow-duration="1.5s" id="tech_specs">
                     <!-- SECTION TITLE -->
-                    <h2 class="white-text">Tech Specs</h2>
+                    <h2 class="white-text" data-i18n="tech_specs.title"></h2>
                     <div class="colored-line-left">
                     </div>
                     <p>
                         <ul class="feature-list">
-                            <li><i class='arrow_triangle-right'></i>Music Library Integration</li>
-                            <li><i class='arrow_triangle-right'></i>Waveforms scroll</li>
-                            <li><i class='arrow_triangle-right'></i>Section title edit</li>
-                            <li><i class='arrow_triangle-right'></i>Song, Album, Artist name edit</li>
-                            <li><i class='arrow_triangle-right'></i>Loop playback (section, song)</li>
-                            <li><i class='arrow_triangle-right'></i>Speed control (-50% to +200%)</li>
-                            <li><i class='arrow_triangle-right'></i>Pitch control (-12 to +12)</li>
-                            <li><i class='arrow_triangle-right'></i>7 bands EQ control (-24dB to +12dB)</li>
-                            <li><i class='arrow_triangle-right'></i>FX (Vocal Cancel)</li>
-                            <li><i class='arrow_triangle-right'></i>Share Extension, Open-in support</li>
-                            <li><i class='arrow_triangle-right'></i>Remote control access</li>
-                            <li><i class='arrow_triangle-right'></i>Low latency playback (Audio Unit support)</li>
-                            <li><i class='arrow_triangle-right'></i>Background playback</li>
-                            <li><i class='arrow_triangle-right'></i>Supports all major audio formats (AAC, MP3, WAV, AIFF...)</li>
+                            <li><i class='arrow_triangle-right'></i><span data-i18n="tech_specs.1"></span></li>
+                            <li><i class='arrow_triangle-right'></i><span data-i18n="tech_specs.2"></span></li>
+                            <li><i class='arrow_triangle-right'></i><span data-i18n="tech_specs.3"></span></li>
+                            <li><i class='arrow_triangle-right'></i><span data-i18n="tech_specs.4"></span></li>
+                            <li><i class='arrow_triangle-right'></i><span data-i18n="tech_specs.5"></span></li>
+                            <li><i class='arrow_triangle-right'></i><span data-i18n="tech_specs.6"></span></li>
+                            <li><i class='arrow_triangle-right'></i><span data-i18n="tech_specs.7"></span></li>
+                            <li><i class='arrow_triangle-right'></i><span data-i18n="tech_specs.8"></span></li>
+                            <li><i class='arrow_triangle-right'></i><span data-i18n="tech_specs.9"></span></li>
+                            <li><i class='arrow_triangle-right'></i><span data-i18n="tech_specs.10"></span></li>
+                            <li><i class='arrow_triangle-right'></i><span data-i18n="tech_specs.11"></span></li>
+                            <li><i class='arrow_triangle-right'></i><span data-i18n="tech_specs.12"></span></li>
+                            <li><i class='arrow_triangle-right'></i><span data-i18n="tech_specs.13"></span></li>
+                            <li><i class='arrow_triangle-right'></i><span data-i18n="tech_specs.14"></span></li>
                         </ul>
-                        Notice: DRM protected content is not supported, because Apple does not allow 3rd party apps to access the files.
+                        <span data-i18n="tech_specs.notice"></span>
                     </p>
                 </div>
                 <!-- PHONES IMAGE -->
@@ -359,12 +397,12 @@
             <!-- SECTION HEADER -->
             <div class="section-header wow fadeIn animated" data-wow-offset="10" data-wow-duration="1.5s">
                 <!-- SECTION TITLE -->
-                <h2 class="white-text">Screenshots</h2>
+                <h2 class="white-text" data-i18n="screenshots.title"></h2>
             </div>
 
             <div class="row wow bounceIn animated" data-wow-offset="10" data-wow-duration="1.5s">
                 <div id="screenshots" class="owl-carousel owl-theme">
-                   
+
                     <div class="shot">
                         <a href="images/screenshots/iPhone_SectionList.png" data-lightbox-gallery="screenshots-gallery"><img src="images/screenshots/iPhone_SectionList.png" alt="Screenshot"></a>
                     </div>
@@ -388,11 +426,11 @@
                     <div class="shot">
                         <a href="images/screenshots/iPhone_EQ.png" data-lightbox-gallery="screenshots-gallery"><img src="images/screenshots/iPhone_EQ.png" alt="Screenshot"></a>
                     </div>
-                    
+
                     <div class="shot">
                         <a href="images/screenshots/iPhone_MediaList.png" data-lightbox-gallery="screenshots-gallery"><img src="images/screenshots/iPhone_MediaList.png" alt="Screenshot"></a>
                     </div>
-                    
+
                     <div class="shot">
                         <a href="images/screenshots/iPhone_ShareExtension.png" data-lightbox-gallery="screenshots-gallery"><img src="images/screenshots/iPhone_ShareExtension.png" alt="Screenshot"></a>
                     </div>
@@ -411,7 +449,7 @@
                     <div class="col-md-8 col-md-offset-2">
                         <!-- DOWNLOAD BUTTONS AREA -->
                         <div class="download-container">
-                            <h2 class=" wow fadeInLeft animated" data-wow-offset="10" data-wow-duration="1.5s">Download PlaySections</h2>
+                            <h2 class=" wow fadeInLeft animated" data-wow-offset="10" data-wow-duration="1.5s" data-i18n="download.title"></h2>
 
                             <!-- BUTTONS -->
                             <div class="buttons wow fadeInRight animated" data-wow-offset="10" data-wow-duration="1.5s">

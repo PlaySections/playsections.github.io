@@ -1,0 +1,62 @@
+{
+    "main-navigation": {
+        "home": "Home",
+        "features": "Features",
+        "screenshot": "Screenshots",
+        "download": "Download"
+    },
+    "intro-section": {
+        "available": "Available on the App Store",
+        "download": "Download App"
+    },
+    "features": {
+        "title": "PlaySections Features",
+        "subtitle": "Simple but powerful tools",
+        "feature1_title": "Import Audio Files",
+        "feature1_description": "Import from your Music Library, or from the other applications.",
+        "feature2_title": "Set Marks",
+        "feature2_description": "Set marks on an waveforms to divide an audio file into multiple sections.",
+        "feature3_title": "Set Title",
+        "feature3_description": "Set a title for each section, section names, lyrics, chord progressions.",
+        "feature4_title": "Play Sections",
+        "feature4_description": "Tap and jump to sections from a section list. No more A-B loop!",
+        "feature5_title": "Set Loop",
+        "feature5_description": "Set a section loop or song loop. You can play a specific section over again.",
+        "feature6_title": "More Playback Options",
+        "feature6_description": "Playback speed change, pitch shift, vocal cancel, and 7 bands EQ support."
+    },
+    "brief1": {
+        "title": "For Musicians, Singers, Dancers, and More",
+        "description": "PlaySections allows you to play your audio files, with a section list for each song. Set marks to divide an audio file into multiple sections. Set a title for each section and seek to any section from the section list. Set a loop, change playback speed, pitch, and use vocal cancel effects as you want. No need to use fast backward button frequently!",
+        "many_uses_title": "Many Uses",
+        "use1": "Set marks for intro, verses, chorus, instrumental solo",
+        "use2": "Set chord progressions and lyrics for each section",
+        "use3": "Practice of playing musical instruments, singing, and dancing",
+        "use4": "Analyze music structure, chords for music dictation",
+        "use5": "Great for language learners, transcription from audio files of meeting/conference"
+    },
+    "tech_specs": {
+        "title": "Tech Specs",
+        "1": "Music Library Integration",
+        "2": "Waveforms scroll",
+        "3": "Section title edit",
+        "4": "Song, Album, Artist name edit",
+        "5": "Loop playback (section, song)",
+        "6": "Speed control (-50% to +200%)",
+        "7": "Pitch control (-12 to +12)",
+        "8": "7 bands EQ control (-24dB to +12dB)",
+        "9": "FX (Vocal Cancel)",
+        "10": "Share Extension, Open-in support",
+        "11": "Remote control access",
+        "12": "Low latency playback (Audio Unit support)",
+        "13": "Background playback",
+        "14": "Supports all major audio formats (AAC, MP3, WAV, AIFF...)",
+        "notice": "Notice: DRM protected content is not supported, because Apple does not allow 3rd party apps to access the files."
+    },
+    "screenshots": {
+        "title": "Screenshots"
+    },
+    "download": {
+        "title": "Download PlaySections"
+    }
+}

@@ -3,7 +3,8 @@
         "home": "Home",
         "features": "Features",
         "screenshot": "Screenshots",
-        "download": "Download"
+        "download": "Download",
+        "language_selector": "日本語"
     },
     "intro-section": {
         "available": "Available on the App Store",

@@ -8,6 +8,10 @@
     <meta name="author" content="Hiroshi Kajihata">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
+    <link rel="alternate" href="http://playsections.github.io/" hreflang="x-default" />
+    <link rel="alternate" href="http://playsections.github.io/?setLng=en" hreflang="en" />
+    <link rel="alternate" href="http://playsections.github.io/?setLng=ja" hreflang="ja" />
+
     <!-- SITE TITLE -->
     <title>PlaySections - Audio Player for iOS</title>
 
@@ -68,34 +72,14 @@
                 $(".download").i18n();
             }
             $("#language-selector").click(function () {
-                var newLang;
-                if ($("#language-selector").text() != "English") {
-                    // from English to Japanese
-                    newLang = "ja";
-                    $("#language-selector").text("English");
-                } else {
-                    // from Japanese to English
-                    $("#language-selector").text("日本語");
-                    newLang = "en";
-                }
+                var newLang = ($("#language-selector").text() == "English") ? "en" : "ja";
                 $.i18n.setLng(newLang, function () {
                     setupText();
+                    history.replaceState('', '', '?setLng=' + newLang);
                 });
             });
 
-            var lang = navigator.languages ? navigator.languages[0] : (navigator.language || navigator.userLanguage);
-            lang = lang.split("-")[0].toLowerCase(); // "JA-JP" => "ja"
-
-            if (lang == "ja") {
-                $("#language-selector").text("English")
-            } else {
-                $("#language-selector").text("日本語")
-                lang = "en"
-            }
-
-            $.i18n.init({
-                lng: lang
-            }, function () {
+            $.i18n.init({}, function () {
                 setupText();
             });
         });
@@ -147,7 +131,7 @@
                                 <a href="#download" data-i18n="main-navigation.download"></a>
                             </li>
                             <li>
-                                <a href="#home" id="language-selector">日本語</a>
+                                <a href="#" id="language-selector" data-i18n="main-navigation.language_selector"></a>
                             </li>
                         </ul>
                     </div>

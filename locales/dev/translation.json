@@ -38,7 +38,7 @@
     },
     "tech_specs": {
         "title": "Tech Specs",
-        "1": "Music Library Integration",
+        "1": "Music Library Integration (including Apple Music contents)",
         "2": "Waveforms scroll",
         "3": "Section title edit",
         "4": "Song, Album, Artist name edit",
@@ -52,7 +52,7 @@
         "12": "Low latency playback (Audio Unit support)",
         "13": "Background playback",
         "14": "Supports all major audio formats (AAC, MP3, WAV, AIFF...)",
-        "notice": "Notice: DRM protected content is not supported, because Apple does not allow 3rd party apps to access the files."
+        "notice": "Notice: When playing DRM protected contents, the following features are not supported: Waveform, Pitch control, FX and EQ"
     },
     "screenshots": {
         "title": "Screenshots"

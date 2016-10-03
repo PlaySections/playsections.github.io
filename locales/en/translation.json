@@ -13,10 +13,10 @@
     "features": {
         "title": "PlaySections Features",
         "subtitle": "Simple but powerful tools",
-        "feature1_title": "Import Audio Files",
-        "feature1_description": "Import audio files from your Music Library, or from the other applications.",
+        "feature1_title": "Import Audio/Video",
+        "feature1_description": "Import audio/video files from your Music Library/Camera Roll, or from the other applications.",
         "feature2_title": "Set Marks",
-        "feature2_description": "Set marks on an waveforms to divide an audio file into multiple sections.",
+        "feature2_description": "Set marks on an waveforms to divide an audio/video file into multiple sections.",
         "feature3_title": "Set Title",
         "feature3_description": "Set a title for each section. You can set section names, lyrics, chord progressions, and more.",
         "feature4_title": "Play Sections",
@@ -24,11 +24,11 @@
         "feature5_title": "Set Loop",
         "feature5_description": "Set a section loop or song loop playback. You can play a specific section over again.",
         "feature6_title": "More Playback Options",
-        "feature6_description": "Playback speed adjustment, pitch shift, vocal cancel, and 7 bands EQ support."
+        "feature6_description": "Playback speed adjustment, pitch shift, vocal cancel, 7 bands EQ, and flip video support."
     },
     "brief1": {
         "title": "For Musicians, Singers, Dancers, and More",
-        "description": "PlaySections is an audio player that allows you to freely set marks and play back specific sections of your audio files. For example, while you're playing music, you can insert marks where the song transitions between the verse and the chorus, dividing the song into sections. Then you can pick a section from the generated section list and listen to any part of the song. PlaySections features useful functionality including loop playback, tempo/playback speed adjustment, pitch shift, vocal cancellation, and a 7 band equalizer, making it a perfect app to use in instrument, vocal, or dance practice, or when playing music by ear.",
+        "description": "PlaySections is an audio/video player that allows you to freely set marks and play back specific sections of your audio/video files. For example, while you're playing music, you can insert marks where the song transitions between the verse and the chorus, dividing the song into sections. Then you can pick a section from the generated section list and listen to any part of the song. PlaySections features useful functionality including loop playback, tempo/playback speed adjustment, pitch shift, vocal cancellation, and a 7 band equalizer, making it a perfect app to use in instrument, vocal, or dance practice, or when playing music by ear.",
         "many_uses_title": "Many Uses",
         "use1": "Set marks for intro, verses, chorus, instrumental solo",
         "use2": "Set chord progressions and lyrics for each section title",
@@ -47,12 +47,13 @@
         "7": "Pitch control (-12 to +12)",
         "8": "7 bands EQ control (-24dB to +12dB)",
         "9": "FX (Vocal Cancel)",
-        "10": "Share Extension, Open-in support",
-        "11": "Remote control access",
-        "12": "Low latency playback (Audio Unit support)",
-        "13": "Background playback",
-        "14": "Supports all major audio formats (AAC, MP3, WAV, AIFF...)",
-        "notice": "Notice: When playing DRM protected contents, the following features are not supported: Waveform, Pitch control, FX and EQ"
+        "10": "Flip Video",
+        "11": "Share Extension, Open-in support",
+        "12": "Remote control access",
+        "13": "Low latency playback (Audio Unit support)",
+        "14": "Background playback",
+        "15": "Supports all major audio/video formats (AAC, MP3, WAV, AIFF, MP4, MOV...)",
+        "notice": "Notice: When playing DRM protected contents, the following features are not supported: Waveform, Pitch control, FX and EQ. When playing video contents, the following features are not supported: Pitch control, FX and EQ."
     },
     "screenshots": {
         "title": "Screenshots"

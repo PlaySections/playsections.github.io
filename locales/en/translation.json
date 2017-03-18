@@ -54,6 +54,7 @@
         "13": "Low latency playback (Audio Unit support)",
         "14": "Background playback",
         "15": "Supports all major audio/video formats (AAC, MP3, WAV, AIFF, MP4, MOV...)",
+        "16": "VoiceOver support",
         "notice": "Notice: When playing DRM protected contents, the following features are not supported: Waveform, Pitch control, FX and EQ. When playing video contents, the following features are not supported: Pitch control, FX and EQ."
     },
     "screenshots": {
